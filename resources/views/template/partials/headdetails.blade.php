@@ -1,5 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Platz - Detailed Single Post</title>
+<title>Platz - @yield('name')</title>
 
 <!-- Behavioral Meta Data -->
 	<meta name="apple-mobile-web-app-capable" content="yes">

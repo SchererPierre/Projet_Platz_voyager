@@ -9,40 +9,40 @@
 
 <body>
 
-<a name="ancre"></a>
+    <a name="ancre"></a>
 
-<!-- CACHE -->
-<div class="cache"></div>
+    <!-- CACHE -->
+    <div class="cache"></div>
 
-<!-- HEADER -->
+    <!-- HEADER -->
 
-    @include('template.partials.header')
+        @include('template.partials.header')
 
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
 
-    @include('template.partials.navbar')
+        @include('template.partials.navbar')
 
-<!-- FILTER -->
+    <!-- FILTER -->
 
-    @include('template.partials.filter')
-	
-<!-- PORTFOLIO -->
-
-    <div id="wrapper-container">
+        @include('template.partials.filter')
         
-        @yield('content')
-        
-        @include('template.partials.thanks')
+    <!-- PORTFOLIO -->
 
-        @include('template.partials.footer')
+        <div id="wrapper-container">
+            
+            @yield('content')
+            
+            @include('template.partials.thanks')
 
-        @include('template.partials.copyright')
+            @include('template.partials.footer')
 
-    </div>
+            @include('template.partials.copyright')
 
-<!-- SCRIPT -->
+        </div>
 
-    @include('template.partials.scripts')
+    <!-- SCRIPT -->
+
+        @include('template.partials.scripts')
 
 </body>
 
