@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('posts.index');
-});
+    return view('posts.index', ['posts' => \App\Models\Post::all()]);
+})->name('posts.index');
 
 Route::get('posts/{post}', function ( \App\Models\Post $post) {
     return view('posts.show', compact('post'));
