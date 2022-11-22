@@ -27,7 +27,7 @@
                         <div id="part-info">Wordpress theme</div>
                     </div>
                 </figure>
-
+                
                 <figure class="white">
                     <a href="#">
                         <img src="img/font-1.jpg" alt="" />

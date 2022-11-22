@@ -3,7 +3,7 @@
 
 <head>
 
-    @include('template.partials.head')
+    @include('template.partials._head')
 
 </head>
 

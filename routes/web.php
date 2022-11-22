@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('posts.index');
 });
 
+Route::get('posts/{post}', function ( \App\Models\Post $post) {
+    return view('posts.show', compact('post'));
+})->name('posts.show');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
