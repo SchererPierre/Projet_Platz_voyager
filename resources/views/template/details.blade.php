@@ -3,7 +3,7 @@
 
 <head>
 
-    @include('template.partials.headdetails')
+    @include('template.partials._headdetails')
 
 </head>
 
@@ -16,15 +16,15 @@
 
     <!-- HEADER -->
 
-        @include('template.partials.header')
+        @include('template.partials._header')
 
     <!-- NAVBAR -->
 
-        @include('template.partials.navbar')
+        @include('template.partials._navbar')
 
     <!-- FILTER -->
 
-        @include('template.partials.filter')
+        @include('template.partials._filter')
 
 
     <!-- PORTFOLIO -->
@@ -33,18 +33,18 @@
 
             @yield('content')
             
-            @include('template.partials.thanksdetails')
+            @include('template.partials._thanksdetails')
             
-            @include('template.partials.footerdetails')
+            @include('template.partials._footerdetails')
 
-            @include('template.partials.copyright')
+            @include('template.partials._copyright')
 
         </div>
 
 
     <!-- SCRIPT -->
 
-        @include('template.partials.scriptsdetails')
+        @include('template.partials._scriptsdetails')
 
 </body>
 

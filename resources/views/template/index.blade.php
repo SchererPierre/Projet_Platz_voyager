@@ -16,15 +16,15 @@
 
     <!-- HEADER -->
 
-        @include('template.partials.header')
+        @include('template.partials._header')
 
     <!-- NAVBAR -->
 
-        @include('template.partials.navbar')
+        @include('template.partials._navbar')
 
     <!-- FILTER -->
 
-        @include('template.partials.filter')
+        @include('template.partials._filter')
         
     <!-- PORTFOLIO -->
 
@@ -32,17 +32,17 @@
             
             @yield('content')
             
-            @include('template.partials.thanks')
+            @include('template.partials._thanks')
 
-            @include('template.partials.footer')
+            @include('template.partials._footer')
 
-            @include('template.partials.copyright')
+            @include('template.partials._copyright')
 
         </div>
 
     <!-- SCRIPT -->
 
-        @include('template.partials.scripts')
+        @include('template.partials._scripts')
 
 </body>
 
