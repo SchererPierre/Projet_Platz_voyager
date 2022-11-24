@@ -8,9 +8,9 @@
         font-family: 'socialicoregular';
         src: url('font/socialico-webfont.eot');
         src: url('font/socialico-webfont.eot?#iefix') format('embedded-opentype'),
-             url('font/socialico-webfont.woff2') format('woff2'),
-             url('font/socialico-webfont.woff') format('woff'),
-             url('font/socialico-webfont.ttf') format('truetype'),
+             url('{{asset ('font/socialico-webfont.woff2')}}') format('woff2'),
+             url('{{asset ('font/socialico-webfont.woff')}}') format('woff'),
+             url('{{asset ('font/socialico-webfont.ttf')}}') format('truetype'),
              url('font/socialico-webfont.svg#socialicoregular') format('svg');
     }
     
@@ -474,12 +474,12 @@
         float:left;
         width:65px;
         height:65px;
-        background: url(img/avatar.png) no-repeat;
+        background: url({{asset ('img/avatar.png')}}) no-repeat;
         top:0;
     }
     
-    .image-reply-post{background: url(img/avatar.png) no-repeat;}
-    .image-reply-post-2{background: url(img/avatar-2.png) no-repeat;}
+    .image-reply-post{background: url({{asset ('img/avatar.png')}}) no-repeat;}
+    .image-reply-post-2{background: url({{asset ('img/avatar-2.png')}}) no-repeat;}
     
     .name-reply-post,.name-reply-post-2{
         float:left;
@@ -621,7 +621,7 @@
         float:left;
         width:68px;
         height:68px;
-        background: url(img/title-icon-ps.svg) no-repeat;
+        background: url({{asset ('img/title-icon-ps.svg')}}) no-repeat;
         margin-right:20px;
     }
     
@@ -799,7 +799,7 @@
         -webkit-appearance: none;
         box-shadow: none;
         outline: 0;
-        background: url(img/icon-newsletter.svg) no-repeat 10px 9px;
+        background: url({{asset ('img/icon-newsletter.svg')}}) no-repeat 10px 9px;
         margin-left:20px;
         vertical-align:center;
         font-weight:400;
@@ -830,7 +830,7 @@
         box-shadow: none;
         outline: 0;
         margin: 0;
-        background: url(img/icon-search.svg) no-repeat 12px 7px;
+        background: url({{asset ('img/icon-search.svg')}}) no-repeat 12px 7px;
         vertical-align:center;
         margin-left:-40px;
         background-color:#FFF;
