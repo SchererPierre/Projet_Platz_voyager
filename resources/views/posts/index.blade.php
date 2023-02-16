@@ -18,15 +18,17 @@
 
                     <figure class="white">
                         <a href="{{ route('posts.show', ['post' => $post->id ]) }}">
-                            <img src="img/psd-4.jpg" alt="" />
+
+                            <img src="{{ asset('storage/' . $post->image) }}" alt="" />
+
                             <dl>
                                 <dt>{{ $post->title }}</dt>
                                 <dd>{{ $post->resume }}</dd>
                             </dl>
                         </a>
                         <div id="wrapper-part-info">
-                            <div class="part-info-image"><img src="img/icon-psd.svg" alt="" width="28" height="28"/></div>
-                            <div id="part-info">{{ $post->title }}</div>
+                            <div class="part-info-image"><img src="{{ asset('storage/' . $post->category->image) }}" alt="" width="28" height="28"/></div>
+                            <div id="part-info">{{ $post->category->name }}</div>
                         </div>
                     </figure>
                     

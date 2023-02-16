@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('posts.index', ['posts' => \App\Models\Post::paginate(20)]);
+    return view('posts.index', ['posts' => \App\Models\Post::paginate(16)]);
 })->name('posts.index');
 
 Route::get('posts/{post}', function ( \App\Models\Post $post) {

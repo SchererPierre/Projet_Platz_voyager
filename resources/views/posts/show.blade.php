@@ -1,3 +1,8 @@
+{{-- 
+    Variables disponibles:
+        $comments: Post (id, first_name, ...)
+    --}}
+    
 @extends('template.details')
 
 @section('title')
@@ -14,8 +19,8 @@
 
             <div class="title-item">
                 <div class="title-icon"></div>
-                <div class="title-text">Ipad Pro Mockup </div>
-                <div class="title-text-2">Sept 25, 2015 by Onuur</div>
+                <div class="title-text">{{ $post->title }} </div>
+                <div class="title-text-2">{{ $post->created_at }} by {{ $post->author }}</div>
             </div>
 
 
@@ -34,12 +39,12 @@
 
                 <div class="wrapper-weight">
                     <div class="icon-weight"><img src="{{asset ('img/icon-weight.svg')}}" alt="" width="20" height="23"/></div>
-                    <div class="text-weight">23 Mo</div>
+                    <div class="text-weight">{{ $post->weight }} Mo</div>
                 </div>
 
                 <div class="wrapper-desc">
                     <div class="icon-desc"><img src="{{asset ('img/icon-desc.svg')}}" alt="" width="24" height="24"/></div>
-                    <div class="text-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </div>
+                    <div class="text-desc">{{ $post->content }}</div>
                 </div>
 
                 <div class="wrapper-download">
@@ -59,18 +64,16 @@
 
             </div>
 
-                    <div class="post-reply">
-                        <div id="title-post-send">
-                            <hr/><h2>Your comments</h2>
-                        </div>
-
-
+                <div class="post-reply">
+                    <div id="title-post-send">
+                        <hr/><h2>Your comments</h2>
+                    </div>
                 </div>
 
                 <div class="post-reply">
                     <div class="image-reply-post"></div>
-                    <div class="name-reply-post">Igor vlademir</div>
-                    <div class="text-reply-post">Awesome mockup, i like it very much ! It will help me for my website i was looking for since few days. Thank you a lot.</div>
+                    <div class="name-reply-post"></div>
+                    <div class="text-reply-post"></div>
                 </div>
 
                 <div class="post-reply-2">
@@ -90,8 +93,12 @@
                         </form>
                     </div>
                 </div>
+
             </div>
+
         </div>
+        
     </div>
+    
 
 @endsection
