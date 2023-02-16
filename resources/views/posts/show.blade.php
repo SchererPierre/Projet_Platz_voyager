@@ -26,15 +26,15 @@
 
             <div class="work">
                 <figure class="white">
-                        <img src="{{asset ('img/psd-4.jpg')}}" alt="" />
+                        <img src="{{asset ('storage/' . $post->image)}}" alt="" />
                 </figure>
 
             <div class="wrapper-text-description">
 
 
                 <div class="wrapper-file">
-                    <div class="icon-file"><img src="{{asset ('img/icon-psdfile.svg')}}" alt="" width="21" height="21"/></div>
-                    <div class="text-file">Photoshop</div>
+                    <div class="icon-file"><img src="{{asset ('storage/' . $post->category->image)}}" alt="" width="21" height="21"/></div>
+                    <div class="text-file">{{$post->category->name}}</div>
                 </div>
 
                 <div class="wrapper-weight">
@@ -49,16 +49,17 @@
 
                 <div class="wrapper-download">
                     <div class="icon-download"><img src="{{asset ('img/icon-download.svg')}}" alt="" width="19" height="26"/></div>
-                    <div class="text-download"><a href="#"><b>Download</b></a></div>
+                    <div class="text-download"><a href="{{asset ('img/icon-download.svg')}}"><b>Download</b></a></div>
                 </div>
 
                 <div class="wrapper-morefrom">
                     <div class="text-morefrom">More from .psd</div>
                     <div class="image-morefrom">
-                        <a href="#"><div class="image-morefrom-1"><img src="{{asset ('img/psd-1.jpg')}}" alt="" width="430" height="330"/></div></a>
-                        <a href="#"><div class="image-morefrom-2"><img src="{{asset ('img/psd-2.jpg')}}" alt="" width="430" height="330"/></div></a>
-                        <a href="#"><div class="image-morefrom-3"><img src="{{asset ('img/psd-3.jpg')}}" alt="" width="430" height="330"/></div></a>
-                        <a href="#"><div class="image-morefrom-4"><img src="{{asset ('img/psd-6.jpg')}}" alt="" width="430" height="330"/></div></a>
+                        
+                        @include('posts._recents', [
+                            'posts' => \App\Models\Post::orderBy('created_at', 'desc')->take(4)->get(),
+                        ])
+
                     </div>
                 </div>
 
