@@ -21,6 +21,16 @@ Route::get('posts/{post}', function ( \App\Models\Post $post) {
     return view('posts.show', compact('post'));
 })->name('posts.show');
 
+Route::get('posts/{post}', function (\App\Models\Post $post) {
+    $comments = $post->comments;
+    return view('posts.show', compact('post'), compact('comments'));
+})->name('posts.show');
+
+Route::get('category/{id}', function ($id) {
+    $posts = Category::find($id)->posts()->paginate(10);
+    return view('posts.index', ['posts' => $posts]);
+})->name('categories.index');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
